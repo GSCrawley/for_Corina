@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+html, body {
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 300px * 10%;
+  height: 425px * 10%;
+  border: 10px solid rgb(24, 63, 24);
+  border-radius: 50%;
+  margin: 50px auto 0 auto;
+  box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  background-color:rgb(112, 108, 108);
+                           
+}
+
+
+.card .text-container  #head{
+  font-family: "Nobile", sans-serif;
+  font-display: inline-block;
+  overflow: none;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding-top: 2rem;
+  font-size: 2em;
+  margin: 30px auto 30px auto;
+  padding-top: 1rem;
+  margin-top:2rem; 
+  
+}
+
+h5 {
+  text-align: center;
+  text-justify: auto;
+
+}
+
+h6 {
+  text-align: center;
+  /* text-justify:auto; */
+  line-height:2.5mm;
+  white-space:inherit;
+  margin-left:5px;
+  margin-right:5px;
+
+}
+.card p {
+  font-size: 2.1em;
+  /* line-height: 0.2; */
+  font-family: "Nobile";
+  color: whitesmoke;
+  background-color: #b4abd2;
+  font-style: italic;
+  text-align:justify;
+  margin: 30px auto 0px auto=;
+  border-radius: 50%;
+}
+
+.card .front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: -10px 0px 0px -10px;
+  border: 10px solid rgb(24, 63, 24);
+  backface-visibility: hidden;
+  background-color:rgb(112, 108, 108);
+  background-size: contain;
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.card:hover .front {
+  transform: perspective(800px) rotateY(-170deg);
+  background-color: #41718d;
+}
+
+.card:hover .back {
+  transform: perspective(800px) rotateY(-170deg);
+  box-shadow: 7px 0px 5px 0px rgba(34, 20, 238, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background-color: #d2dcd2;
+}
+
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid rgb(24, 63, 24);
+  border-radius: 50%;
+  margin: -10px 0px 0px -10px;
+  backface-visibility: visible;
+  filter: drop-shadow(4px 4px 4px 4px rgba(208, 232, 71, 0.954));
+  transform-style: preserve-3d;
+  transform-origin: 0% 50%;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+  /* background-color: rgb(230, 240, 230); */
+  background-color:rgb(112, 108, 108);
+  box-shadow: 0px 0px 0px 0px rgba(65, 19, 231, 0.5);
+}
+
+.cover-shape-large {
+  position: relative;
+  width: 65%;
+  height: 48%;
+  top: 25%;
+  left: 18%;
+  transform: background-color black;
+}
+
+.cover-shape-large .shape-block, .cover-shape-large .shape-diamond {
+  background-color: black;
+}
+
+.cover-shape-small {
+  position: relative;
+  width: 0%;
+  height: 0%;
+  top: 30%;
+  left: 25%;
+}
+
+.shape-block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  background-image: url(media/menc.jpg);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
